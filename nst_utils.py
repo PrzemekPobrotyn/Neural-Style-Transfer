@@ -1,4 +1,5 @@
-### Part of this code is due to the MatConvNet team and is used to load the parameters of the pretrained VGG19 model in the notebook ###
+### Most of the code below is due to the MatConvNet team and DeepLearning.ai course staff
+### except my minor modifications and added method resize_style_image
 
 import imageio
 import scipy.misc
@@ -188,6 +189,8 @@ def save_image(path, image):
 
 
 def resize_style_image(content_image_path, style_image_path):
+    '''Resizes style image to match the size of the conent image.'''
+
 
     content_image = imageio.imread(content_image_path)
     style_image = imageio.imread(style_image_path)

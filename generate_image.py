@@ -23,7 +23,7 @@ content_image, style_image = resize_style_image(args.content_image_path, args.st
 CONFIG.IMAGE_WIDTH = content_image.shape[1]
 CONFIG.IMAGE_HEIGHT = content_image.shape[0]
 
-content_image = reshape_and_normalize_image(content_image)
+content_image = reshape_and_normalize_image(content_image) # actually, this isn't necessary
 style_image = reshape_and_normalize_image(style_image)
 sess, train_step, model = prepare_network(content_image, style_image)
 train_network(sess, train_step, model, content_image, args.output_path,

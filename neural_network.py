@@ -172,7 +172,23 @@ def prepare_network(content_image, style_image, learning_rate=1.0):
 
 def train_network(sess, train_step, model, content_image, output_path,
                   num_iterations, save_intermediate):
+    '''
+    Optimises the cost function defined by 'prepare_network' method.
 
+    Arguments:
+
+    sess -- tensorflow session
+    train_step -- optimizer.minimze(cost)
+    model -- dictionary containing pretrained VGG model
+    content_image -- array, content_image
+    output_path -- string, generated image path
+    num_iterations -- int, number of iterations of optimisation
+    save_intermediate -- bool, whether to save intermediate generated images or not
+
+    Returns:
+
+    generated_image -- array, generated image
+    '''
     # initalized image to be generated
     generated_image = generate_noise_image(content_image)
 

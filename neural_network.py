@@ -202,15 +202,9 @@ def train_network(sess, train_step, model, content_image, output_path,
 
         if save_intermediate:
             if i % (int(num_iterations/10)) == 0:
-
-                # Jt, Jc, Js = sess.run([J, J_content, J_style])
-                # print("Iteration " + str(i) + " :")
-                # print("total cost = " + str(Jt))
-                # print("content cost = " + str(Jc))
-                # print("style cost = " + str(Js))
-
                 # save current generated image
                 save_image('/output/iter' + str(i) + ".jpg", generated_image)
+
         printProgressBar(i + 1, num_iterations, prefix='Progress:',
                          suffix='Complete', length=50)
 

@@ -147,7 +147,7 @@ def prepare_network(content_image, style_image, learning_rate=1.0):
     tf.reset_default_graph()
     sess = tf.InteractiveSession()
 
-    model = load_vgg_model("imagenet-vgg-verydeep-19.mat")
+    model = load_vgg_model("/data/imagenet-vgg-verydeep-19.mat")
 
     # define graph for computing content cost
     sess.run(model['input'].assign(content_image))
@@ -194,11 +194,11 @@ def train_network(sess, train_step, model, content_image, output_path,
                 # print("style cost = " + str(Js))
 
                 # save current generated image
-                save_image('iter' + str(i) + ".jpg", generated_image)
+                save_image('/output/iter' + str(i) + ".jpg", generated_image)
         printProgressBar(i + 1, num_iterations, prefix='Progress:',
                          suffix='Complete', length=50)
 
     # save last generated image
-    save_image(output_path, generated_image)
+    save_image("/output/" + output_path, generated_image)
 
     return generated_image

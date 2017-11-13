@@ -6,7 +6,7 @@ This repo contains a tensorflow implementation of the paper [**A Neural Algorith
 This implementation was part of a deeplearning.ai Convolutional Neural Networks course. Some of the utility functions for using a pretrained VGG-19 network were provided by the course staff. 
 
 # Examples
-San Francisco Bay Bridge
+San Francisco Bay Bridge (5000 iterations)
 ![San Francisco Bay Bridge][sf]
 
 [sf]: https://github.com/PrzemekPobrotyn/Neural-Style-Transfer/blob/master/neural_sf.jpg "Neural Bay Bridge"
@@ -17,7 +17,7 @@ Original:
 
 [sf_orig]: https://github.com/PrzemekPobrotyn/Neural-Style-Transfer/blob/master/sf.jpg "Original Bay Bridge"
 
-Oxford winter skyline
+Oxford winter skyline (500 iterations)
 
 ![Winter Oxford][ox_nst]
 

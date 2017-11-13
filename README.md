@@ -33,7 +33,7 @@ Original
 
 We used a pretrained model by MatConvNet, available at [this link](http://www.vlfeat.org/matconvnet/pretrained/). Download it and put it in *data* directory together with the scripts to generate images locally.
 
-# Dependecies
+# Dependencies
 
 * tensorflow 1.0.0
 * numpy 1.13.3
